@@ -38,14 +38,30 @@ function toggleSignIn() {
   document.getElementById('quickstart-sign-in').disabled = true;
 }
 
-function writeUserData(userId, name, email) {
+function writeUserData(userId, name, email, phone_number) {
   var ref = firebase.database().ref();
   alert(ref);
-  ref('users/' + userId).set({
-    username: name,
-    email: email
+  var usersRef = ref.child("users").child(userId);
+  usersRef.set({
+    name: name,
+    email: email,
+    phone_number: phone_number
   });
 }
+
+
+function phonenumber(phonenumber) { 
+
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+  if(String(phonenumber).match(phoneno))  {
+    return true;  
+  }
+  else {  
+    alert("message");  
+    return false;  
+  }  
+}  
 
 /**
  * Handles the sign up button press.
@@ -53,6 +69,9 @@ function writeUserData(userId, name, email) {
 function handleSignUp() {
   var email = document.getElementById('emailSignUp').value;
   var password = document.getElementById('passwordSignUp').value;
+  var phone_number = document.getElementById("phonenumber").value;
+  var confirm_password = document.getElementById("confirm-password").value;
+  var name = document.getElementById("name").value;
   if (email.length < 4) {
     alert('Please enter an email address.');
     return;
@@ -61,6 +80,20 @@ function handleSignUp() {
     alert('Please enter a password.');
     return;
   }
+  if (password != confirm_password) {
+    alert('Passwords do not match.');
+    return;
+  }
+  if (name.length < 0){
+    alert('Please enter a name.')
+    return;
+  }
+
+  //checking if valid phone number
+  if (!phonenumber(phone_number)){
+    return;
+  }
+
   // Sign in with email and pass.
   // [START createwithemail]
   firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -76,8 +109,8 @@ function handleSignUp() {
     console.log(error);
     // [END_EXCLUDE]
   });
-  writeUserData(firebase.auth().currentUser.uid, 'name', email);
-  alert('User successfully added')
+  writeUserData(firebase.auth().currentUser.uid, name, email, phone_number);
+  alert('User successfully added');
   // [END createwithemail]
 }
 
