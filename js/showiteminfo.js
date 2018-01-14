@@ -18,7 +18,6 @@ function checkPhoneInfo() {
 }
 
 function checkEmailInfo() {
-	document.getElementById("info").innerHTML = "Contact Person via Email.";
 	PhoneBool = false;
 	EmailBool = true;
 	FacebookBool = false;
@@ -27,7 +26,6 @@ function checkEmailInfo() {
 }
 
 function checkFacebookInfo() {
-	document.getElementById("info").innerHTML = "Contact Person via Facebook.";
 	PhoneBool = false;
 	EmailBool = false;
 	FacebookBool = true;
@@ -65,7 +63,13 @@ function details() {
 }
 
 function getInfo() {
-  usersRef.on("value", function(snapshot) {
+	var db = firebase.database();
+	var unparsedId = getParameterByName('id');
+	var userId = unparsedId.substr(0, unparsedId.indexOf('?'));
+	var itemId = getParameterByName('itemid');
+	var usersRef = db.ref("/users/" + userId);
+	var itemsRef = db.ref("/users/" + userId + "/Items");
+  	usersRef.on("value", function(snapshot) {
 
 	  if (PhoneBool){
 	  	document.getElementById("info").innerHTML = "Contact Person via Phone: <br/>" + snapshot.val().phone_number;
