@@ -31,9 +31,25 @@ body {
 .col-xs-6 {
 	padding-top: 10px;
 	position: relative;
-	margin: 0 auto;
   	text-align: center;
   	height: 100%;
+  	width: 50%;
+}
+
+.col-xs-6 a {
+	width: calc(100% - 15px);
+}
+
+.login {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	margin-left: 15px;
+}
+
+.register {
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	margin-right: 50px;
 }
 
 .col-sm-offset-3 {
@@ -45,12 +61,13 @@ body {
 
 .panel-login {
 	border: 1px solid rgba(0,0,0,.125);
-	border-radius: .25rem;
+	border-radius: .75rem;
 	padding: 20px;
+	background-color: #f2f2f2;
 }
 .panel-login>.panel-heading {
 	color: #00415d;
-	background-color: #fff;
+	background-color: #f2f2f2;
 	border-color: #fff;
 	text-align:center;
 }
@@ -62,10 +79,6 @@ body {
 	-webkit-transition: all 0.1s linear;
 	-moz-transition: all 0.1s linear;
 	transition: all 0.1s linear;
-}
-.panel-login>.panel-heading a.active{
-	color: #029f5b;
-	font-size: 18px;
 }
 .panel-login>.panel-heading hr{
 	margin-top: 10px;
@@ -104,6 +117,7 @@ body {
 	padding: 14px 0;
 	text-transform: uppercase;
 	border-color: #59B2E6;
+
 }
 .btn-login:hover,
 .btn-login:focus {
