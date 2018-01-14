@@ -1,140 +1,31 @@
 body {
-  font-family: "Open Sans";
-  font-weight: 400;
-  background-color: #F7F7F7;
+  font-family: "Barlow", sans-serif;
+  background-color: #FFFFFF;
   height: 100%;
   position: absolute;
   min-width: 0px;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.homepage-icon img {
-  max-width: 200px;
+.MainContainer {
   position: relative;
-  margin-top: 110px;
-}
-
-.navbar img {
-  max-width: 80px;
-  position: relative;
-  margin-top: 110px;
-}
-
-.homepage-links {
-  font-family: "Open Sans";
-  line-height: 200%;
-  margin-top: 12px;
-  color: #808080;
-  font-size: 14px;
-  bottom: 60px;
-  height: 0.75cm;
-}
-
-.homepage-links a{
-  color: #808080;
-}
-
-.homepage-links a:hover{
-  text-decoration: none;
-  color: #000000;
-}
-
-.homepage-links a:link{
-  text-decoration: none;
-}
-
-/* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-}
-
-.popup img {
-	position: static;
-	max-width: 16px;
-	margin-top: 10px;
-	opacity: 0.5;
-	cursor: pointer;
-}
-
-.popup img:hover {
-	opacity: 0.8;
-}
-
-/* The actual popup (appears on top) */
-.popup .popuptext {	
-
-	font-size: 12px;
-    display: none;
-    width: 800px;
-    color: #000;
-    text-align: center;
-    margin-top: 20px;
-}
-
-@media (max-width: 1000px){
-	.popup .popuptext {
-		font-size: 10px;
-		width: calc(100vw - 200px);
-		margin-left: calc(-(100vw - 200px)/2);
-	}
-}
-
-@media (max-width: 500px){
-	.popup .popuptext {
-		width: calc(100vw - 100px);
-		margin-left: calc(-(100vw - 100px)/2);
-	}
-}
-
-
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
-.popup .show {
-    margin-bottom: 50px;
-    display: inline-block;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 2s;
-}
-
-/* Add animation (fade in the popup) */
-@-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-}
-
-.blog-post {
+  margin: 0 auto;
   text-align: center;
-  width: 100%;
-  padding-right: 500px;
-  padding-left: 500px;
+  height: 100%;
 }
 
-@media (max-width: 1211px){
-  .blog-post{
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+.form {
+  position: relative;
+  padding-top: 30vh;
 }
 
-@media (max-width: 600px){
-  .blog-post{
-    padding-right: 50px;
-  padding-left: 50px;
-  }
+.genQR {
+  position: relative;
+  top: 20px;
 }
 
-
-.blog-post h1 {
-	font-size: 17px;
-	color: #000;
-}
-
-.blog-post p {
-	font-size: 12px;
-	color: #808080;
+.genQRbutton {
+  font-size: 50px;
 }

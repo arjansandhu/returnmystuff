@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="./images/favicon.ico">
+    <!-- <link rel="icon" href="./images/favicon.ico"> -->
 
-    <title>Daniel Chau</title>
+    <title>NWHacks</title>
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -22,6 +22,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- PhotoSwipe -->
+    <!-- Core CSS file -->
+	<link rel="stylesheet" href="./css/photoswipe.css"> 
+
 	<!-- Skin CSS file (optional)
      In folder of skin CSS file there are also:
      - .png and .svg icons sprite, 
@@ -29,47 +33,40 @@
 	<link rel="stylesheet" href="./css/default-skin/default-skin.css"> 
 
   <!-- Google Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,500,600,700,800,900" rel="stylesheet" type = 'text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300italic' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Barlow:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+
   </head>
 
   <body>
-    <div class="homepage-hero">
-      <div class="homepage-icon" style="text-align: center; vertical-align: middle;">
-        <img src="./images/HOMEPAGEICON.png">
-      </div>
 
-      <div class="homepage-links" style="text-align: center;">
-        <a href="https://instagram.com/areyoudaniel/" target="_blank">p h o t o s</a><br>
-        <a href="https://www.youtube.com/channel/UCOW-t2M4sgvblT0F3VyNmbQ" target="_blank">v i d e o s</a><br>
-        <a href="https://soundcloud.com/dchau/likes" target="_blank">m u s i c</a><br>
-        <a href="./blog/">b l o g</a><br>
-        <a href ="UBCResume.pdf" target="_blank">r e s u m e</a><br>
-        <div class="popup" style="text-align: center; vertical-align: middle;">
-          <div onclick="myFunction()">
-            <img src="./images/HOMEPAGEARROW.png">
-          </div>
-          <div class="popuptext" id="myPopup">
-            <p>Hey, whatsup? I’m Daniel, nice to meet you.</p>
-            <p><strong>Current Schooling:</strong> University of British Columbia / Bachelor of Applied Science / CPEN</p>
-            <p><strong>Current Location:</strong> Vancouver, British Columbia</p>
-            <p><strong>Things I love:</strong></p>
-            <p><strong>PHOTOGRAPHY.</strong>  Started getting into photography when I was 16 and have loved it ever since.  Especially love taking pictures of people, food, and interesting places. <strong>CODING.</strong>  Began when I was in grade 11 and took a computer science course.  Love learning new languages and creating things. <strong>FASHION.</strong>  Really started getting into fashion, mainly streetwear, about two years ago.  Only problem with this love is the price tag. haha. </p>
-            <p><strong>Current Favourite Brands:</strong> Dime, Raised by Wolves, Reigning Champ, Champion </p>
-          </div>
-          <script>
-            // When the user clicks on div, open the popup
-              function myFunction() {
-              var popup = document.getElementById('myPopup');
-              var pop = document.getElementById("popuptext");
-              popup.classList.toggle('show');
-            }
-          </script>
-        </div>
-      </div>
+  <main id="myContainer" class="MainContainer">
 
 
+    <div class="form">
+      <form>
+        Item Name:<br>
+        <input type="text" name="firstname"><br>
+        Last name:<br>
+        <input type="text" name="lastname"><br>
+        Last name:<br>
+        <input type="text" name="lastname"><br>
+      </form>
     </div>
-  </body>
+
+    <div class="genQR">
+      <button bl="genQRbutton">Generate QR Code</button>
+    </div>
+
+  </main>
+
+  <script src="js/app.min.js"></script>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
