@@ -123,7 +123,8 @@ function showPosition(position) {
 
 	console.log("1");
 	var GoogleMapsURL = "https://www.google.com/maps/?q=" + position.coords.latitude + "," + position.coords.longitude;
-	window.location.href = 'mailto:' + email + '?subject=subject&body=' + GoogleMapsURL;
+	document.getElementById("mapURL").innerHTML = "Contact Person via Email: <br/><a id=\"email\" href=\"mailto:" + email + "\"?subject=subject&body=" + GoogleMapsURL + ">" + Send Location + "</a>";
+	// window.location.href = 'mailto:' + email + '?subject=subject&body=' + GoogleMapsURL;
 }
 
 
