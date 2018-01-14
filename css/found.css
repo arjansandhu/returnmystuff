@@ -51,3 +51,11 @@ body {
 #locationButton{
 	width: 80%;
 }
+
+#sendLoc {
+	margin-bottom: 20px;
+}
+
+#mapURL {
+	text-decoration: none;
+}
