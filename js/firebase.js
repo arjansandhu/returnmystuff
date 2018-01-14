@@ -34,7 +34,7 @@ function toggleSignIn() {
     });
     // [END authwithemail]
   }
-  window.location.href = "./userHome/index.html" + "?id=" + firebase.auth().currentUser.uid;
+  window.location.href = "http://www.findmyshit.tech/userHome/index.html" + "?id=" + firebase.auth().currentUser.uid;
 }
 
 function writeUserData(userId, name, email, phone_number) {
