@@ -35,8 +35,9 @@ body {
 }
 
 .panel-login {
-	border-style: solid;
-	border-color: #ccc;
+	border: 1px solid rgba(0,0,0,.125);
+	border-radius: .25rem;
+	padding: 20px;
 }
 .panel-login>.panel-heading {
 	color: #00415d;
@@ -127,4 +128,18 @@ body {
 	color: #fff;
 	background-color: #1CA347;
 	border-color: #1CA347;
+}
+
+#login-submit{
+	background-color: #b30000;
+	border-color: #b30000;
+}
+
+#selector-row{
+	padding-bottom: 10px;
+}
+
+#register-submit{
+	background-color: #b30000;
+	border-color: #b30000; 
 }

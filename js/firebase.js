@@ -34,13 +34,11 @@ function toggleSignIn() {
     });
     // [END authwithemail]
   }
-  alert(firebase.auth().currentUser.uid);
   window.location.href = "userHome.html" + "?id=" + firebase.auth().currentUser.uid;
 }
 
 function writeUserData(userId, name, email, phone_number) {
   var ref = firebase.database().ref();
-  alert(ref);
   var usersRef = ref.child("users").child(userId);
   usersRef.set({
     name: name,
