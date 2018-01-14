@@ -30,12 +30,12 @@ function toggleSignIn() {
         alert(errorMessage);
       }
       console.log(error);
-      document.getElementById('quickstart-sign-in').disabled = false;
       // [END_EXCLUDE]
     });
     // [END authwithemail]
   }
-  document.getElementById('quickstart-sign-in').disabled = true;
+  alert(firebase.auth().currentUser.uid);
+  window.location.href = "userHome.html" + "?id=" + firebase.auth().currentUser.uid;
 }
 
 function writeUserData(userId, name, email, phone_number) {
