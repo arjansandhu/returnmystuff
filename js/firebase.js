@@ -34,7 +34,7 @@ function toggleSignIn() {
     });
     // [END authwithemail]
   }
-  window.location.href = "http://www.returnmystuff.tech/userHome" + "?id=" + firebase.auth().currentUser.uid;
+  window.location.href = "./userHome/index.html" + "?id=" + firebase.auth().currentUser.uid;
 }
 
 function writeUserData(userId, name, email, phone_number) {

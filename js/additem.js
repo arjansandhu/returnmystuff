@@ -32,6 +32,7 @@ function randomString(length, chars) {
 function writeItemData() {
   var ref = firebase.database().ref();
   var itemName = document.getElementById('item-name').value;
+  console.log(itemName);
   var userId = getParameterByName('id');
   var itemToken = randomString(16, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
   var usersRef = ref.child("users").child(userId).child("Items").child(itemName);

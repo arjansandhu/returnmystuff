@@ -28,7 +28,8 @@ body {
 	width:100%;
 }
 
-.item-name {
+#item-name {
+  margin-top: 15px;
   padding-left: 25%;
   padding-right: 25%;
 }
@@ -44,3 +45,32 @@ body {
   height: 300px;
   width: 300px;
 }
+
+#items {
+  text-align: left;
+}
+
+#createqr {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nav {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.nav-item button {
+  width: 300px;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+
+
+
+

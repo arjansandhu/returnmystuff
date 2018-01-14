@@ -10,7 +10,7 @@
 
     <title>Home</title>
 
-    <link rel="canonical" href="/userHome">
+    <!-- <link rel="canonical" href="/userHome"> -->
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,16 +24,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- PhotoSwipe -->
-    <!-- Core CSS file -->
-  <link rel="stylesheet" href="./css/photoswipe.css"> 
-
-  <!-- Skin CSS file (optional)
-     In folder of skin CSS file there are also:
-     - .png and .svg icons sprite, 
-     - preloader.gif (for browsers that do not support CSS animations) -->
-  <link rel="stylesheet" href="./css/default-skin/default-skin.css"> 
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,500,600,700,800,900" rel="stylesheet" type = 'text/css'>
   <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
@@ -44,8 +34,6 @@
 
 
   </head>
-
-  <base href="https://d3v1ed3zg8lsi6.cloudfront.net/" target="_blank">
 
   <!-- firebase scripts from the CDN -->
   <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-app.js"></script>
@@ -72,26 +60,31 @@
   <body>
     <ul class="nav nav-pills nav-fill">
       <li class="nav-item">
-        <a class="nav-link" href="#">My Items</a>
+        <button id="myitems" class="nav-link" onclick="getItems()">My Items</button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <button id="addqrcode" class="nav-link" onclick="getItems()">Add Item</button>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Account Settings</a>
+        <button id="accountsettings" class="nav-link" onclick="getItems()">Account Settings</button>
       </li>
     </ul>
   <main id="myContainer" class="MainContainer">
     <div class="container">
       <div class="card" id="informationCard">
         <div class="card-body">
+
+          <div id="items">
+            <ul id="output" class="lead"></ul>
+          </div>
+
           <div class="item-name">
             <input type="text" name="item-name" id="item-name" tabindex="1" class="form-control" placeholder="Item Name" value="" style="text-align:center;">
           </div>
 
           <div id="qrcode"></div>
 
-          <button type="button" class="btn btn-primary" onclick="writeItemData();" >Create QR Code</button>
+          <button id="createqr" type="button" class="btn btn-primary" onclick="writeItemData();" >Create QR Code</button>
 
         </div>
       </div>
@@ -103,13 +96,14 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
 
-    <script src="js/app.min.js"></script>
-    <script type="text/javascript" src="js/qrcode.js"></script>
-    <script type="text/javascript" src="js/additem.js"></script>
+    <script src="../js/app.min.js"></script>
+    <script type="text/javascript" src="../js/qrcode.js"></script>
+    <script type="text/javascript" src="../js/additem.js"></script>
+    <script type="text/javascript" src="../js/getitems.js"></script>
 
 </body></html>
