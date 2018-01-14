@@ -34,7 +34,7 @@ function toggleSignIn() {
     });
     // [END authwithemail]
   }
-  window.location.href = "./userHome" + "?id=" + firebase.auth().currentUser.uid;
+  window.location.href = "https://d3v1ed3zg8lsi6.cloudfront.net/userHome" + "?id=" + firebase.auth().currentUser.uid;
 }
 
 function writeUserData(userId, name, email, phone_number) {
@@ -108,8 +108,16 @@ function handleSignUp() {
     // [END_EXCLUDE]
   });
   writeUserData(firebase.auth().currentUser.uid, name, email, phone_number);
-  alert('User successfully added');
   // [END createwithemail]
+  // alert('user added');
+  // $("#login-form").delay(100).fadeIn(100);
+  //   $("#register-form").fadeOut(100);
+  //   $('#register-form-link').removeClass('active');
+  //   $(this).addClass('active');
+  //   e.preventDefault();
+
+  //   var form = document.getElementById("login-form");
+  //   form.reset();
 }
 
 /**
