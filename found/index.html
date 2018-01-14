@@ -22,16 +22,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- PhotoSwipe -->
-    <!-- Core CSS file -->
-  <link rel="stylesheet" href="./css/photoswipe.css"> 
-
-  <!-- Skin CSS file (optional)
-     In folder of skin CSS file there are also:
-     - .png and .svg icons sprite, 
-     - preloader.gif (for browsers that do not support CSS animations) -->
-  <link rel="stylesheet" href="./css/default-skin/default-skin.css"> 
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:100,300,400,500,600,700,800,900" rel="stylesheet" type = 'text/css'>
   <link href='http://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
@@ -58,19 +48,19 @@
           <div class="container">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="Phone" autocomplete="off" checked> Phone
+                <input type="radio" href="#" name="options" id="Phone" autocomplete="off" checked> Phone
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="Email" autocomplete="off"> Email
+                <input type="radio" href="#" name="options" id="Email" autocomplete="off"> Email
               </label>
               <label class="btn btn-secondary">
-                <input type="radio" name="options" id="Facebook" autocomplete="off"> Facebook
+                <input type="radio" href="#" name="options" id="Facebook" autocomplete="off"> Facebook
               </label>
             </div>
           </div>
           <div class="card" id="informationCard">
             <div class="card-body">
-              This text will pull relevant info depending on the radio button selection.
+              
             </div>
           </div>
           <button type="button" class="btn btn-secondary">Send Location</button>
@@ -84,12 +74,13 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
 
-    <script src="js/app.min.js"></script>
-    <script src="js/loginregister.js"></script>
+    <script src="../js/app.min.js"></script>
+    <script type="text/javascript" src="../js/phoneemailfacebook.js"></script>
+    <script type="text/javascript" src="../js/showiteminfo.js"></script>
 
 </body></html>

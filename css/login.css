@@ -38,6 +38,7 @@ body {
 
 .col-xs-6 a {
 	width: calc(100% - 15px);
+	box-shadow: none !important;
 }
 
 .login {

@@ -9,7 +9,7 @@ function makeCode (itemId, userId) {
         return;
     }
     
-    qrcode.makeCode("./found" + "?id=" + userId + "?itemid=" + itemId);
+    qrcode.makeCode("./found/index.html" + "?id=" + userId + "?itemid=" + itemId);
 }
 
 $("#text").
