@@ -107,17 +107,21 @@ function handleSignUp() {
     console.log(error);
     // [END_EXCLUDE]
   });
-  writeUserData(firebase.auth().currentUser.uid, name, email, phone_number);
-  // [END createwithemail]
-  // alert('user added');
-  // $("#login-form").delay(100).fadeIn(100);
-  //   $("#register-form").fadeOut(100);
-  //   $('#register-form-link').removeClass('active');
-  //   $(this).addClass('active');
-  //   e.preventDefault();
 
-  //   var form = document.getElementById("login-form");
-  //   form.reset();
+  alert('You have successfully made an account!');
+
+  writeUserData(firebase.auth().currentUser.uid, name, email, phone_number);
+
+  document.getElementById("confirm-password").value = "";
+  document.getElementById("passwordSignUp").value = "";
+  document.getElementById("emailSignUp").value = "";
+  document.getElementById("name").value = "";
+  document.getElementById("phonenumber").value = "";
+
+  $("#login-form").delay(100).fadeIn(100);
+  $("#register-form").fadeOut(100);
+  $('#register-form-link').removeClass('active');
+  $(this).addClass('active');
 }
 
 /**

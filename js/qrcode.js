@@ -363,6 +363,7 @@ var QRCode;
 			this._bIsPainted = false;
 			this._elImage = document.createElement("img");
 			this._elImage.alt = "Scan me!";
+			this.elImage.onclick = "newWindow = window.open('http://budclarychevy.com/path/to/img.png'); newWindow.print();";
 			this._elImage.style.display = "none";
 			this._el.appendChild(this._elImage);
 			this._bSupportDataURI = null;

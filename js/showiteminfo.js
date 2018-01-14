@@ -75,7 +75,7 @@ function getInfo() {
 	  	document.getElementById("info").innerHTML = "Contact Person via Phone: <br/>" + snapshot.val().phone_number;
 	  }
 	  if (EmailBool){
-	  	document.getElementById("info").innerHTML = "Contact Person via Email: <br/>" + snapshot.val().email;
+	  	document.getElementById("info").innerHTML = "Contact Person via Email: <br/><a id=\"email\" href=\"mailto:" + snapshot.val().email + "\">" + snapshot.val().email + "</a>";
 	  }
 	  if (FacebookBool){
 	  	document.getElementById("info").innerHTML = "Contact Person via Facebook: <br/>";

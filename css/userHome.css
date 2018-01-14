@@ -13,17 +13,17 @@ body {
 }
 
 .row {
-	position: relative;
-	margin: 0 auto;
-  	text-align: center;
-  	height: 100%;
+  position: relative;
+  margin: 0 auto;
+    text-align: center;
+    height: 100%;
 }
 
 .col-md-8 {
-	position: relative;
-	margin: 0 auto;
-  	text-align: center;
-  	height: 100%;
+  position: relative;
+  margin: 0 auto;
+    text-align: center;
+    height: 100%;
 }
 
 .logo img {
@@ -36,12 +36,12 @@ body {
 }
 
 #buttonBar{
-	width: 100%
+  width: 100%
 }
 
 .card{
-	margin-top:25px;
-	width:100%;
+  margin-top:25px;
+  width:100%;
 }
 
 #item-name {
@@ -68,7 +68,7 @@ body {
 
 #createqr {
   position: relative;
-  margin: 0 auto;
+  margin: auto auto;
   text-align: center;
 }
 
@@ -78,15 +78,7 @@ body {
 }
 
 .nav-item button {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
+margin: auto;
+width: 95%;
+background-color: #868e96;
 }
-
-
-
-
-
-
-
