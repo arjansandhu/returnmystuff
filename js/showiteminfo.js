@@ -4,6 +4,7 @@ var Facebook = document.getElementById('Facebook');
 var PhoneBool;
 var EmailBool;
 var FacebookBool;
+var email;
 
 window.onload = function() {
   details();
@@ -43,7 +44,7 @@ function details() {
 	var output;
 
 	usersRef.on("value", function(snapshot) {
-		document.getElementById("owner").innerHTML = snapshot.val().name;
+		document.getElementById("owner").innerHTML = "Owner: " + snapshot.val().name;
 
 	}, function (errorObject) {
 	  console.log("The read failed: " + errorObject.code);
@@ -75,6 +76,7 @@ function getInfo() {
 	  	document.getElementById("info").innerHTML = "Contact Person via Phone: <br/><a id=\"email\" href=\"tel:" + snapshot.val().phone_number + "\">" + snapshot.val().phone_number + "</a>";
 	  }
 	  if (EmailBool){
+	  	email = snapshot.val().email
 	  	document.getElementById("info").innerHTML = "Contact Person via Email: <br/><a id=\"email\" href=\"mailto:" + snapshot.val().email + "\">" + snapshot.val().email + "</a>";
 	  }
 	  if (FacebookBool){
@@ -96,3 +98,27 @@ function getParameterByName(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+
+var x = document.getElementById("demo");
+
+function getLocation() {
+	  if (navigator.geolocation) {
+	      navigator.geolocation.getCurrentPosition(showPosition);
+	  } else {
+	      alert("Geolocation is not supported by this browser.");
+	  }
+	}
+function showPosition(position) {
+	console.log("1");
+	var GoogleMapsURL = "https://www.google.com/maps/?q=" + position.coords.latitude + "," + position.coords.longitude;
+	window.open('mailto:' + email + '?subject=subject&body=' + GoogleMapsURL);
+}
+
+
+
+
+
+
+
+
