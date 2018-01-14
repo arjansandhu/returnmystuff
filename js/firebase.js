@@ -34,7 +34,7 @@ function toggleSignIn() {
     });
     // [END authwithemail]
   }
-  window.location.href = "userHome.html" + "?id=" + firebase.auth().currentUser.uid;
+  window.location.href = "./userHome/" + "?id=" + firebase.auth().currentUser.uid;
 }
 
 function writeUserData(userId, name, email, phone_number) {
