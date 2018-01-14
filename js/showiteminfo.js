@@ -4,7 +4,6 @@ var Facebook = document.getElementById('Facebook');
 var PhoneBool;
 var EmailBool;
 var FacebookBool;
-var email;
 
 window.onload = function() {
   details();
@@ -76,7 +75,6 @@ function getInfo() {
 	  	document.getElementById("info").innerHTML = "Contact Person via Phone: <br/><a id=\"email\" href=\"tel:" + snapshot.val().phone_number + "\">" + snapshot.val().phone_number + "</a>";
 	  }
 	  if (EmailBool){
-	  	email = snapshot.val().email
 	  	document.getElementById("info").innerHTML = "Contact Person via Email: <br/><a id=\"email\" href=\"mailto:" + snapshot.val().email + "\">" + snapshot.val().email + "</a>";
 	  }
 	  if (FacebookBool){
@@ -110,6 +108,19 @@ function getLocation() {
 	  }
 	}
 function showPosition(position) {
+	var db = firebase.database();
+	var unparsedId = getParameterByName('id');
+	var userId = unparsedId.substr(0, unparsedId.indexOf('?'));
+	var itemId = getParameterByName('itemid');
+	var usersRef = db.ref("/users/" + userId);
+	var itemsRef = db.ref("/users/" + userId + "/Items");
+	var email; 
+  	usersRef.on("value", function(snapshot) {
+  		email = snapshot.val().email;
+	}, function (errorObject) {
+	  console.log("The read failed: " + errorObject.code);
+	});
+
 	console.log("1");
 	var GoogleMapsURL = "https://www.google.com/maps/?q=" + position.coords.latitude + "," + position.coords.longitude;
 	window.open('mailto:' + email + '?subject=subject&body=' + GoogleMapsURL);
