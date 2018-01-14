@@ -72,7 +72,7 @@ function getInfo() {
   	usersRef.on("value", function(snapshot) {
 
 	  if (PhoneBool){
-	  	document.getElementById("info").innerHTML = "Contact Person via Phone: <br/>" + snapshot.val().phone_number;
+	  	document.getElementById("info").innerHTML = "Contact Person via Phone: <br/><a id=\"email\" href=\"tel:" + snapshot.val().phone_number + "\">" + snapshot.val().phone_number + "</a>";
 	  }
 	  if (EmailBool){
 	  	document.getElementById("info").innerHTML = "Contact Person via Email: <br/><a id=\"email\" href=\"mailto:" + snapshot.val().email + "\">" + snapshot.val().email + "</a>";

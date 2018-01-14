@@ -87,7 +87,18 @@
             <input type="text" name="item-name" id="item-name" tabindex="1" class="form-control" placeholder="Item Name" value="" style="text-align:center;">
           </div>
 
-          <div id="qrcode"></div>
+          <div id="qrcode" onclick="printDiv('qrcode')"></div>
+
+          <script type="text/javascript">
+            function printDiv(divName) {
+
+             var printContents = document.getElementById(divName).innerHTML;
+             w=window.open();
+             w.document.write(printContents);
+             w.print();
+             w.close();
+            }
+          </script>
 
           <button id="createqr" type="button" class="btn btn-primary" onclick="writeItemData();" >Create QR Code</button>
 
