@@ -6,8 +6,7 @@ function getItems() {
   usersRef.on("value", function(snapshot) {
   	  var items = document.getElementById("output");
   	  items.innerHTML = "";
-  	  var items_array = snapshotToArray(snapshot);
- 
+
 	  snapshot.forEach(function(childSnapshot) {
 	        var item = childSnapshot.val();
 	        item.key = childSnapshot.key;

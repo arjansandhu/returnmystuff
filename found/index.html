@@ -33,13 +33,35 @@
 
   </head>
 
+  <!-- firebase scripts from the CDN -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-messaging.js"></script>
+
+  <!-- initializing firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBhlTVSUo_H-FPH0pUORiDWr56t_opsRHA",
+      authDomain: "returnmystuff-2d16f.firebaseapp.com",
+      databaseURL: "https://returnmystuff-2d16f.firebaseio.com",
+      projectId: "returnmystuff-2d16f",
+      storageBucket: "",
+      messagingSenderId: "306245673109"
+    };
+    firebase.initializeApp(config);
+  </script>
+
   <body>
 
-    <h2>
+    <h2 id="owner">
       Item Owner
       <br>
-      <small class="text-muted">Contact Details</small>
     </h2>
+    <div id="itemdetails">Item Details</div>
 
   <main id="myContainer" class="MainContainer">
     <div class="container">
@@ -47,19 +69,19 @@
         <div class="col-md-8">
           <div class="container">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary">
-                <input type="radio" href="#" name="options" id="Phone" autocomplete="off" checked> Phone
+              <label class="btn btn-secondary" onclick="checkPhoneInfo()">
+                <input type="radio" name="options" id="Phone" autocomplete="off" checked> Phone
               </label>
-              <label class="btn btn-secondary">
-                <input type="radio" href="#" name="options" id="Email" autocomplete="off"> Email
+              <label class="btn btn-secondary" onclick="checkEmailInfo()">
+                <input type="radio" name="options" id="Email" autocomplete="off"> Email
               </label>
-              <label class="btn btn-secondary">
-                <input type="radio" href="#" name="options" id="Facebook" autocomplete="off"> Facebook
+              <label class="btn btn-secondary" onclick="checkFacebookInfo()">
+                <input type="radio" name="options" id="Facebook" autocomplete="off"> Facebook
               </label>
             </div>
           </div>
           <div class="card" id="informationCard">
-            <div class="card-body">
+            <div class="card-body" id="info">
               
             </div>
           </div>
@@ -80,7 +102,6 @@
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
 
     <script src="../js/app.min.js"></script>
-    <script type="text/javascript" src="../js/phoneemailfacebook.js"></script>
     <script type="text/javascript" src="../js/showiteminfo.js"></script>
 
 </body></html>
